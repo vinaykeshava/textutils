@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import Alert from './component/Alert';
 import {
   BrowserRouter as Router,
-  Routes,
+  Switches,
   Route,
   Link
 } from "react-router-dom";
@@ -33,14 +33,14 @@ function App() {
         <Navbar title="Vinay" aboutText="About Textutils" aboutlink="www.msrit.edu" mode={mode} togglemode={togglemode} />
         <Alert alert={'This is alert'} />
       <dic className="container my-3"></dic>
-        <Routes>
+        <Switches>
           <Route path="/about">
             <About mode={mode} />
           </Route>
           <Route path="/">
             <Textform heading="Enter the text to analyse" />
           </Route>
-        </Routes>
+        </Switches>
       </Router>
     </>
   );
